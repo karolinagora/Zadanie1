@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-	<meta charset="UTF-8">
+ <meta charset="UTF-8">
+  
+  
 	<title>Google</title>
 	<link rel="stylesheet" href="zadanie1style.css">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
+
 <body>
- <div id="wrapper">
-	 <header id="header">
+
+
+	 <header class="header">
        <nav>
-        <a href="" class="menu text" >Gmail</a><a href="" class="menu text">Grafika</a><a href="" class="menu"><img src="mozaic.JPG" alt="mozaika" /></a><a href="" class="menu"><img src="notification.JPG" alt="not" /></a><a href="" class="menu"><img src="avatar.png" alt="avatar" /></a>
+        <a href="https://gmail.com" class="menu text" >Gmail</a>
+        <a href="https://www.google.pl/imghp?hl=pl&tab=wi" class="menu text">Grafika</a>
+        <a class="menu" href="https://about.google/intl/pl/products"><i class="fas fa-th"></i></a>
+        
+        <a href="" class="menu"><img src="notification.JPG" alt="not" /></a>
+        <a href="" class="menu"><img src="avatar.png" alt="avatar" /></a>
         </nav>
         </header>
 	
 		<div id="content">
-        <img src="logo.png" alt="logo" id="google">
+        <img  class ="logo" src="logo.png" alt="logo" id="google">
 
-			<div id="div_input">
-			<input id="input" type="text">
-			<div class="input_icon"><a href="#"><img src="keyboard.JPG" alt="google"/></a>
-			<a href="#"><img src="mic.JPG" alt="google"/></a>
-			</div>
-			</div>
-			<div id="container_button"><input class="button" value="Szukaj w Google" type="submit"><input  class="button" value="Szczesliwy traf"  type="submit"></div><p>Korzystaj w Google w tych jezykach: <a href="">English.</a></p>
+			<main class="zad1-Main">
+        <div class="Search">
+            <i class="fas fa-search"></i>
+            <input class="Search-input">
+            <i class="far fa-keyboard"></i>
+            <i class="fas fa-microphone"></i>
+        </div>
+     
+			 </main>
+      <div class="Navigation">
+            <button class="zad1-MainNavigation-button mdc-button mdc-button--unelevated">Szukaj w Google</button>
+            <button class="zad1-MainNavigation-button mdc-button mdc-button--unelevated">Szczesliwy traf</button>
+        </div>
+       </div>
+    
+    
 
-		</div>
-	</div>
 	<footer></footer>
+  
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"> mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));</script>
+    
+  
+  
 </body>
 </html>
