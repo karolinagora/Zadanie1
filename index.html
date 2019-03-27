@@ -2,14 +2,14 @@
 <html lang="pl">
 <head>
  <meta charset="UTF-8">
-  
-  
+
+
 	<title>Google</title>
 	<link rel="stylesheet" href="zadanie1style.css">
-  
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -22,37 +22,66 @@
         <a href="https://gmail.com" class="menu text" >Gmail</a>
         <a href="https://www.google.pl/imghp?hl=pl&tab=wi" class="menu text">Grafika</a>
         <a class="menu" href="https://about.google/intl/pl/products"><i class="fas fa-th"></i></a>
-        
+
         <a href="" class="menu"><img src="notification.JPG" alt="not" /></a>
         <a href="" class="menu"><img src="avatar.png" alt="avatar" /></a>
         </nav>
         </header>
-	
+
 		<div id="content">
         <img  class ="logo" src="logo.png" alt="logo" id="google">
 
-			<main class="zad1-Main">
-        <div class="Search">
+			<div class="zad1-Main">
+        <div class="g-search">
             <i class="fas fa-search"></i>
-            <input class="Search-input">
+
+            <div id="app">
+              <div class="container-item">
+    						<input v-model="inputContent" />
+    						<v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+    					</div>
+  					</div>
+
             <i class="far fa-keyboard"></i>
             <i class="fas fa-microphone"></i>
         </div>
-     
-			 </main>
-      <div class="Navigation">
+
+      </div>
+
+      <div class="MainNavigation">
             <button class="zad1-MainNavigation-button mdc-button mdc-button--unelevated">Szukaj w Google</button>
             <button class="zad1-MainNavigation-button mdc-button mdc-button--unelevated">Szczesliwy traf</button>
         </div>
        </div>
-    
-    
 
-	<footer></footer>
-  
+	<footer>
+
+  </footer>
+
+  <script type="text/x-template" id="autocomplete-tpl">
+<div class="autocomplete">
+	<label :for="id">{{label}}</label>
+	<textarea v-if="textarea" :id="id" :rows="rows" :cols="cols" class="autocomplete-input" :placeholder="placeholder" @focusout="focusout" @focus="focus" @keydown.13="chooseItem" @keydown.tab="chooseItem" @keydown.40="moveDown" @keydown.38="moveUp" v-model="inputValue"
+		type="text"></textarea>
+	<input v-else :id="id" class="autocomplete-input" :placeholder="placeholder" @focusout="focusout" @focus="focus" @keydown.13="chooseItem" @keydown.tab="chooseItem" @keydown.40="moveDown" @keydown.38="moveUp" v-model="inputValue" type="text">
+
+
+	<ul :class="{
+		'autocomplete-list': true,
+		[id+'-list']: true
+	}" v-if="searchMatch.length > 0">
+		<li :class="{active: selectedIndex === index}" v-for="(result, index) in searchMatch" @click="selectItem(index), chooseItem()" v-html="highlightWord(result)">
+
+		</li>
+	</ul>
+</div>
+</script>
+
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"> mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));</script>
-    
-  
-  
+  <script src="animals.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="skrypt.js"></script>
+
+
 </body>
 </html>

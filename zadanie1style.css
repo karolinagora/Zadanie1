@@ -1,6 +1,6 @@
 @import 'https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css';
 
-* {
+body {
 	margin:0;
 	padding: 0;
 	font-family:arial,sans-serif;
@@ -8,9 +8,10 @@
 	border-box: border-box;
 	background: #fff;
 	color: #545454;
+	display: block;
 }
 #header{
-	
+
 	min-width: 1280px;
 	min-height: 720px;
 	position: relative;
@@ -40,58 +41,27 @@ header nav a {
 	vertical-align: middle;
 	text-align: center;
 	display: inline-block;
-	margin: auto;	
+	margin: auto;
 }
 #content {
 	width: 100%;
 	height: 100%;
 	min-width: 1280px;
 	min-height: 720px;
-	position: absolute;
+	position: relative;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	
-}
-#div_input {
-	height: 44px;
-	width: 584px;
-	margin: 10px auto;
-	box-shadow:#C0C0C0 2px 3px 5px 1px;
-	padding: 5px 0px;
-	padding-left: 16px;	
-	
-}
-#input{
-	height: 34px;
-	width: 463px;
-	border: none;
-	margin-right: 9px;	
-}
-.input_icon {
-	display: block;
-	float: right;
-	padding: 0 8px;
-}
 
-#div_input a img{
-	vertical-align: middle;
-	margin: auto;	
-	height: 34px;
-	text-align: center;
-	padding: 5px 0;
-	width: 40px;
-	display: block;
-	float: left;
 }
 
 img#google {
 
 display:block;
 margin: 0 auto;
-padding-bottom: 10px;	
+padding-bottom: 10px;
 }
 #container_button {
 text-align: center;
@@ -112,7 +82,7 @@ text-align: center;
 }
 #content p {
 	text-align: center;
-	
+
 }
  p {
 	line-height: 28px;
@@ -136,14 +106,6 @@ border: 1px solid #757575;
 color: #222;
 }
 
-.Navigation {
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 58px;
-    width: 571px;
-}
-
 .zad1-MainNavigation-button.mdc-button.mdc-button--unelevated {
     margin: 8px;
     background-color: rgb(244, 244, 244);
@@ -151,6 +113,7 @@ color: #222;
     text-transform: initial;
     font-family: arial, sans-serif;
     letter-spacing: normal;
+		position: relative;
 }
 
 .zad1-MainNavigation-button.mdc-button.mdc-button--unelevated:hover {
@@ -158,33 +121,70 @@ color: #222;
     color: black;
 }
 
-
-
 .fa-search {
     margin-left: 15px;
     margin-right: 5px;
     color: rgb(82, 143, 245);
-}
-
-.fa-search {
-    margin-left: 15px;
-    margin-right: 5px;
-    color: rgb(82, 143, 245);
-}
-
-.fa-keyboard {
-    color: rgb(123, 123, 123);
-    margin-right: 15px;
-    margin-left: 5px;
+		position: absolute;
+		left: 8px;
+		padding: 8px;
+		top: 7px;
 }
 
 .fa-microphone {
-    color: rgb(66, 133, 244);
-    margin-right: 15px;
+		color: rgb(66, 133, 244);
+		position: absolute;
+		right: 19px;
+		top: 6px;
+		padding: 8px;
+		font-size: 16px;
+}
+.fa-keyboard {
+		color: rgb(123, 123, 123);
+		position: absolute;
+		right: 55px;
+		top: 6px;
+		padding: 8px;
+		font-size: 16px;
 }
 
-.Search-input {
-    border: none;
-    width: 456px;
-    margin: 4px auto;
+.g-search {
+	position: relative;
+	display: flex;
+	font-family: arial,sans-serif;
+	padding: 0;
+	margin: 0 5px 4px 5px;
+	background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-top-color: #c0c0c0;
+  width: 568px;
+  height: 45px;
+  white-space: nowrap;
+	border-radius: 30px;
+}
+
+.g-search input {
+	outline: none;
+  display: flex;
+  position: relative;
+	white-space: nowrap;
+	color: #222;
+	font-size: small;
+	border: none;
+  padding-left: 0px;
+	padding-right: 85px;
+  margin: 0;
+  width: 400px;
+  height: 45px;
+  z-index:6;
+  left: 50px;
+  background: transparent;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  font: 16px arial,sans-serif;
+  line-height: 1.2em;
+  box-sizing: border-box;
 }
