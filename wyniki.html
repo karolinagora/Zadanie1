@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+
+
+	<title>Google</title>
+	<link rel="stylesheet" href="zadanie1style.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="wyniki.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router@2.7.0/dist/vue-router.js"></script>
+</head>
+
+<body>
+	
+	 <header>
+
+		<div class="google-search">
+			<a href="index.html" class="menu left" ><img class="wyniki-logo" src="logo.png" alt="logo"/> </a>
+    
+			
+			   <div class="g-search">
+            <i class="fas fa-search"></i>
+
+            <div id="app">
+              <div class="container-item">
+    						<input v-model="inputContent" />
+    						<v-autocompleter v-bind:input="inputContent" v-if="inputContent"></v-autocompleter>
+    					</div>
+  					</div>
+
+            <i class="far fa-keyboard"></i>
+            <i class="fas fa-microphone"></i>
+        </div>
+
+		</div>
+<div class="app-menu">
+			<a href="" class="menu"><img src="notification.JPG" alt="not" /></a>
+        <a href="" class="menu"><img src="avatar.png" alt="avatar" /></a>
+
+		</div>
+		
+	</header>
+	
+	
+	<div class='top-menu'>
+		
+		<div class="left-menu">
+				<div class='content-menu'><router-link to="/">wszystko</router-link></div>
+				<div class='content-menu'><router-link to="/wiadomosci">Wiadomosci</router-link></div>
+				<div class='content-menu'><router-link to="/grafika">Grafika</router-link></div>
+				<div class='content-menu'><router-link to="/filmy" >Filmy</router-link></div>
+				<div class='content-menu'><router-link to="/zakupy" >Zakupy</router-link></div>
+				<div class='content-menu'><router-link to="/wiecej" >Wiecej</router-link></div>
+				<div class='content-menu'><router-link to="/narzedzia">Narzedzia</router-link></div>
+		</div>
+    <router-view></router-view>
+
+	</div>
+
+	<div class='search-results'>
+		
+		<div class='note'><p>Okolo 174 000 000 wynikow (0,31 s)</p></div>
+		
+		<div class="results-main">
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019- </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+			<div class='rs-info'>
+				<h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing...</a></h3>
+				<div class='web-adr'><cite class='www'>www.lipsum.com </cite> <span class="tg-arrow"></span></div>
+				<p class='rs-about'><span class='date'>April 2, 2019 - </span> Lorem ipsum <em>dolor</em> sit amet, consectetur adipisicing elit. Pariatur soluta <em>natus</em> laboriosam, sapiente ad suscipit eligendi <em>ducimus</em> consectetur nobis ...</p>
+			</div>
+
+		</div>
+
+		<div class='rs-more'>
+			<div class='propositions'>
+				<h3>Wyszukiwania podobne do: lorem ipsum</h3>
+				<a href="#">lorem ipsum <strong>tekst</strong></a>
+				<a href="#">lorem ipsum <strong>meaning</strong></a>
+				<a href="#">lorem ipsum <strong>lorem ipsum dolor sit amet enim co to znaczy</strong></a>
+
+			</div>
+		</div>
+
+
+		<nav class='bottom-list'>
+			<div class='rs-pages'>
+				<table class='pages'>
+					<tbody>
+						<tr>
+							<td><span class='bG'></span></td>
+							<td><span class='fo'></span><span class='actual'>1</span></td>
+							<td><a href='#' ><span class='o'></span>2</a></td>
+							<td><a href='#' ><span class='o'></span>3</a></td>
+							<td><a href='#' ><span class='o'></span>4</a></td>
+							<td><a href='#' ><span class='o'></span>5</a></td>
+							<td><a href='#' ><span class='o'></span>6</a></td>
+							<td><a href='#' ><span class='o'></span>7</a></td>
+							<td><a href='#' ><span class='o'></span>8</a></td>
+							<td><a href='#' ><span class='o'></span>9</a></td>
+							<td><a href='#' ><span class='o'></span>10</a></td>
+							<td><a href='#' ><span class='gle'></span><span class='next'>Next</span></a></td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</nav>
+
+	</div>
+
+	<footer>
+
+	</footer>
+	 <script>
+      var Wszystko = { template: '' };
+      var Wiadomosci = { template: '<p>"Wiadomosci".</p>' };
+      var Grafika = { template: '<p>"Grafika".</p>' };
+      var Zakupy = { template: '<p>"Zakupy".</p>' };
+      var Filmy = { template: '<p>"Filmy".</p>' };
+      var Wiecej = { template: '<p>"Wiecej".</p>' };
+      var Ustawienia = { template: '<p>"Ustawienia".</p>' };
+      var Narzedzia = { template: '<p>"Narzedzia".</p>' };
+      var routes = [
+        { path: '/', component: Wszystko },
+        { path: '/wiadomosci', component: Wiadomosci},
+        { path: '/grafika', component: Grafika},
+        { path: '/zakupy', component: Zakupy},
+        { path: '/filmy', component: Filmy},
+        { path: '/wiecej', component: Wiecej},
+        { path: '/ustawienia', component: Ustawienia},
+        { path: '/narzedzia', component: Narzedzia},
+      ];
+      var router = new VueRouter({
+        routes: routes,
+      });
+      var app = new Vue({
+        el: '.top-menu',
+        router: router
+      });
+    </script>
+     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="animals.js"></script>
+    <script src="autocompleter.js"></script>
+  
+</body>
+</html>
